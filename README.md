@@ -3,12 +3,12 @@ This repo contains several versions of a simple Todos app, built with different 
 #### Asteroid / Polymer / Paper
 
 Built as a set of Polymer web components, using Paper components for the UI, talking to a Meteor backend via Asteroid. 
-Thanks to Asteroid, this is a static website.
+Thanks to Asteroid, this is a static website. Access it via normal HTTP server, like Apache.
 
 #### Asteroid / React / Materialize
 
 Built as a set of React components, using Materialize.css for the UI, talking to a Meteor backend via Asteroid. 
-Thanks to Asteroid, this is a static website.
+Thanks to Asteroid, this is a static website. Access it via normal HTTP server, like Apache.
 
 #### Meteor / Paper
 
