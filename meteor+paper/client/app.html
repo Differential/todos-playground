@@ -1,0 +1,28 @@
+<template name="app">
+  <core-header-panel vertical layout fit>
+    <core-toolbar>
+      <h3>Isomorphic Todos</h3>
+    </core-toolbar>
+
+    <div vertical layout center>
+      <div horizontal layout class="todo add">
+        <div flex>
+          <paper-input label="What needs to be done?" floatinglabel="true"></paper-input>
+        </div>
+        <div>
+          <paper-button>Add</paper-button>
+        </div>
+      </div>
+      {{#each todos}}
+        {{> todo}}
+      {{/each}}
+    </div>
+    <paper-tabs selected="0">
+      <paper-tab data-filter="all">ALL</paper-tab>
+      <paper-tab data-filter="active">ACTIVE</paper-tab>
+      <paper-tab data-filter="completed">COMPLETED</paper-tab>
+    </paper-tabs>
+  </core-header-panel>
+
+
+</template>

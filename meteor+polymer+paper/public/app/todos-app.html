@@ -1,0 +1,84 @@
+<link rel="import" href="/components/polymer/polymer.html">
+<link rel="import" href="/components/core-header-panel/core-header-panel.html">
+<link rel="import" href="/components/core-toolbar/core-toolbar.html">
+<link rel="import" href="/components/paper-input/paper-input.html">
+<link rel="import" href="/components/paper-button/paper-button.html">
+<link rel="import" href="/components/paper-tabs/paper-tabs.html">
+<link rel="import" href="/app/todos-item.html">
+
+<polymer-element name="todos-app">
+  <template>
+    <style>
+      .add {
+        padding: 10px;
+        width: 90%;
+        font-weight: 300;
+        border-bottom: 1px solid #E5E5E5;
+      }
+      paper-input {
+        width: 100%;
+      }
+      paper-button {
+        top: 10px;
+      }
+      paper-tabs {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+      }
+    </style>
+    <core-header-panel vertical layout fit>
+      <core-toolbar>
+        <h3>Isomorphic Todos</h3>
+      </core-toolbar>
+
+      <div vertical layout center>
+        <div horizontal layout class="add">
+          <div flex>
+            <paper-input id="todo" label="What needs to be done?" floatinglabel="true"></paper-input>
+          </div>
+          <div>
+            <paper-button on-click="{{add}}">Add</paper-button>
+          </div>
+        </div>
+        <template repeat="{{todo in todos}}">
+          <todos-item todo={{todo}}></todos-item>
+        </template>
+      </div>
+      <paper-tabs selected="0">
+        <paper-tab on-click="{{all}}">ALL</paper-tab>
+        <paper-tab on-click="{{active}}">ACTIVE</paper-tab>
+        <paper-tab on-click="{{completed}}">COMPLETED</paper-tab>
+      </paper-tabs>
+    </core-header-panel>
+  </template>
+
+  <script>
+    Polymer({
+      ready: function() {
+        var _this = this;
+
+        Tracker.autorun(function() {
+          _this.todos = Todos.find().fetch();
+        });
+      },
+      add: function() {
+        var el = this.$.todo;
+        if (el.value) {
+          Todos.insert({ text: el.value, done: false });
+        }
+        el.value = '';
+      },
+      all: function() {
+        this.todos = Todos.find().fetch();
+      },
+      active: function() {
+        this.todos = Todos.find({ done: false }).fetch();
+      },
+      completed: function() {
+        this.todos = Todos.find({ done: true }).fetch();
+      }
+    });
+  </script>
+</polymer-element>

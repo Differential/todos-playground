@@ -1,0 +1,9 @@
+<template name="todo">
+  <div horizontal layout class="todo {{#if done}}done{{/if}}">
+    <div flex>{{text}}</div>
+    <div>
+      <core-icon icon="delete"></core-icon>
+      <core-icon icon="done"></core-icon>
+    </div>
+  </div>
+</template>

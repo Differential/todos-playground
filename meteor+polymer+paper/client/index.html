@@ -1,0 +1,32 @@
+<head>
+  <title>Todos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+  <!-- Web Components polyfill -->
+  <script src="/components/webcomponentsjs/webcomponents.js"></script>
+
+  <!-- Core Components -->
+  <link rel="import" href="/components/core-header-panel/core-header-panel.html">
+  <link rel="import" href="/components/core-toolbar/core-toolbar.html">
+
+  <!-- Core Icons -->
+  <link rel="import" href="/components/core-icons/core-icons.html">
+
+  <!-- Paper Components -->
+  <link rel="import" href="/components/paper-button/paper-button.html">
+  <link rel="import" href="/components/paper-input/paper-input.html">
+  <link rel="import" href="/components/paper-tabs/paper-tabs.html">
+
+  <!-- Todos App -->
+  <link rel="import" href="/app/todos-app.html">
+  <style>
+    html,body {
+      height: 100%;
+      margin: 0;
+      font-family: 'RobotoDraft', sans-serif;
+    }
+  </style> 
+</head>
+
+<body>
+  <todos-app></todos-app>
+</body>

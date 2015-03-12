@@ -1,0 +1,56 @@
+<head>
+  <title>Todos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+  <!-- JQuery / Underscore -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.2/underscore-min.js"></script>
+
+  <!-- Materialize -->
+  <link type="text/css" rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css"  media="screen,projection"/>
+  <script type="text/javascript" src="bower_components/materialize/dist/js/materialize.min.js"></script>
+
+
+  <!-- Asteroid -->
+  <script src="bower_components/ddp.js/src/ddp.js"></script>
+  <script src="bower_components/q/q.js"></script>
+  <script src="bower_components/asteroid/dist/asteroid.browser.js"></script>
+
+  <!-- React -->
+  <script src="bower_components/react/react.min.js"></script>
+  <script src="bower_components/react/JSXTransformer.js"></script>
+
+  <!-- Todos App -->
+  <script type="text/jsx" src="todo.jsx"></script>
+  <script type="text/jsx" src="app.jsx"></script>
+
+  <style>
+    html,body {
+      height: 100%;
+      margin: 0;
+      font-family: 'RobotoDraft', sans-serif;
+    }
+    .footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      margin-bottom: 0;
+    }
+    .secondary-content {
+      color: #898989;
+    }
+    .done .text {
+      text-decoration: line-through;
+      font-style: italic;
+      color: rgba(0, 0, 0, 0.5);
+    }
+    .done .mdi-action-done {
+      color: green;
+    }
+  </style> 
+</head>
+
+<body>
+  <div id="renderUntoMe"></div>
+</body>
