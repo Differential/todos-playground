@@ -24,6 +24,11 @@ Meteor minimongo collections.
 Build as a set of React components, using Materialize.css for the UI, talking to a Meteor backend via ordinary 
 Meteor minimongo collections. This uses the `mystor:routecore` Meteor package.
 
+#### Meteor / Babel / React / Materialize
+
+Build as a set of React components, using Materialize.css for the UI, talking to a Meteor backend via ordinary 
+Meteor minimongo collections. This uses the `grigio:babel` ES6/JSX compiler and `grove:react` Meteor packages.
+
 #### Examples
 
 Set of examples to go along with http://slides.com/hellogerard/meteor-meet-react/#/
