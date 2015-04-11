@@ -1,4 +1,4 @@
-/** @jsx React.DOM */
+if (Meteor.isClient) {
 
 Todo = React.createClass({
   complete: function() {
@@ -25,3 +25,5 @@ Todo = React.createClass({
     );
   }
 });
+
+}

@@ -1,10 +1,13 @@
-/** @jsx React.DOM */
 
 Todos = new Meteor.Collection('todos');
 
+if (Meteor.isClient) {
+
 App = React.createClass({
-  getInitialState: function() {
-    return { todos: Todos.find() };
+  mixins: [ ReactiveMixin ],
+
+  getReactiveState: function() {
+    return { todos: Todos.find().fetch() };
   },
 
   submit: function() {
@@ -57,3 +60,5 @@ App = React.createClass({
     );
   }
 });
+
+}

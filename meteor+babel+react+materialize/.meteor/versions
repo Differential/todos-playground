@@ -12,6 +12,8 @@ deps@1.0.7
 ejson@1.0.6
 fastclick@1.0.3
 geojson-utils@1.0.3
+grigio:babel@0.1.1
+grove:react@0.1.1
 html-tools@1.0.4
 htmljs@1.0.4
 http@1.1.0
@@ -25,6 +27,7 @@ logging@1.0.7
 materialize:materialize@0.96.1
 meteor@1.1.6
 meteor-platform@1.2.2
+meteorhacks:flow-router@1.2.0
 minifiers@1.1.5
 minimongo@1.0.8
 mobile-status-bar@1.0.3

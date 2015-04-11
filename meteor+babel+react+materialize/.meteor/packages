@@ -9,3 +9,6 @@ autopublish
 insecure
 reactive-var
 materialize:materialize
+grigio:babel
+meteorhacks:flow-router
+grove:react
